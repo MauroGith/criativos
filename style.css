@@ -1,0 +1,448 @@
+
+
+@font-face {
+  font-family: 'minnerva';
+  src: url('./fonts/Fonte1/Minnerva-Normal.otf');
+  src: url('./fonts/Fonte1/Minnerva-Bold.otf');
+}
+
+@font-face {
+  font-family: 'generalSans';
+  src: url('./fonts/Fonte2/GeneralSans-Variable.ttf');
+}
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1;}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+}
+
+header{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  padding: max(10px, 1%);
+  display: flex;
+  justify-content: space-between;
+}
+
+header .logo {
+  width: max(50px, 3vw);
+  height: max(50px, 3vw);
+}
+
+.icons a {
+  color: white;
+  text-decoration: none;
+  font-size: max(20px, 1.5vw);
+  padding-left: max(5px, .3vw);
+}
+
+.page-top {
+  position: relative;
+}
+
+.page-top .shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.page-top video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-top .text-content {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+  font-family: 'minnerva';
+}
+
+.page-top .text-content img {
+  width: 100%;
+}
+
+.page-top .text-content p {
+  text-align: center;
+  line-height: 1.5;
+  font-size: max(20px, 2vw);
+  font-weight: bold;
+}
+
+.about-us {
+  font-family: 'generalSans';
+  display: flex;
+}
+
+.about-us .text-content {
+  display: flex;
+  align-items: center;
+  background-color: #D86049;
+  width: 50%;
+  padding: max(40px, 4vw);
+  padding-right: 0;
+}
+
+.about-us .bg-image {
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-image .triangle {
+  height: 100%;
+  border-left: 25vw solid #D86049;
+  border-bottom: 45vw solid transparent;
+}
+
+.about-us p {
+  max-width: max(650px, 75%);
+  margin-left: auto;
+  margin-bottom: max(15px, 2vw);
+  font-size: max(18px, 1.8vw);
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.about-us p b {
+  font-weight: bolder;
+}
+
+.services {
+  font-family: 'minnerva';
+  position: relative;
+}
+
+.services h2 {
+  margin-left: max(30px, 4vw);
+  font-weight: bold;
+  font-size: max(25px, 1.6vw);
+  position: absolute;
+  top: -20px;
+}
+
+.services .service-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service-box .service {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 20%;
+  height: max(250px, 15vw);
+  padding: max(10px, 1vw);
+  display: flex;
+  align-items: flex-end;
+}
+
+.service-box .service p {
+  font-size: max(18px, 1vw);
+}
+
+.clients {
+  text-align: center;
+  padding: max(20px, 3vw);
+}
+
+.clients h2 {
+  font-size: max(25px, 2vw);
+  font-family: 'minnerva';
+  font-weight: bolder;
+  color: #E85740;
+  margin-bottom: max(20px, 2vw);
+}
+
+.clients .logo-box {
+  max-width: max(600px, 90%);
+  margin: max(15px, 1vw) auto;
+}
+
+.clients .logo-box img {
+  margin: max(10px, .5vw);
+  min-width: 4vw;
+}
+
+.timeline {
+  padding: max(20px, 4vw);
+  background-image: url('./img/corte_branco.png');
+  background-position: 105% 0%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-color: #E85740;
+  font-family: 'generalSans';
+}
+
+.timeline .year {
+  font-family: 'minnerva';
+  font-weight: bold;
+  font-size: max(40px, 5vw);
+  margin: max(20px, 2vw) 0;
+}
+
+.timeline .slider .slick-dots {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.timeline .slider .slick-dots li button{
+  background-color: white;
+  color: white;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: none;
+  margin: 0 5px;
+}
+
+.timeline .slider .slick-dots .slick-active button {
+  background-color: gray;
+  color: gray;
+}
+
+.timeline .slide-item {
+  padding-right: max(10px, 1vw);
+}
+
+.slide-item .img-play{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: max(300px, 25vw);
+}
+
+.slide-item .img-play i {
+  height: max(100px, 8vw);
+  width: max(100px, 8vw);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: max(1px, .1vw) solid white;
+  font-size: max(30px, 3vw);
+  cursor: pointer;
+}
+
+.timeline p, .timeline span {
+  font-size: max(15px, 1vw);
+}
+
+.timeline p {
+  margin: max(20px, 1vw) 0;
+  font-weight: 500;
+}
+
+.timeline span {
+  font-weight: lighter;
+}
+
+.timeline .year-small {
+  font-family: 'minnerva';
+  font-size: max(30px, 2.5vw);
+}
+
+.timeline-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.timeline-box .line-year {
+  width: 33%;
+}
+
+footer {
+  background-color: #767769;
+  padding: max(20px, 4vw) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: max(90%, 600px);
+  padding: 0 10px;
+}
+
+.footer-content h3 {
+  font-family: 'minnerva';
+  font-weight: normal;
+  font-size: max(50px, 6vw);
+  margin-right: max(20px, 2vw);
+  margin-bottom: 20px;
+}
+
+.footer-content .contact {
+  font-family: 'generalSans';
+  font-weight: lighter;
+}
+
+.footer-content .contact .mail{
+  display: block;
+  margin-bottom: max(10px, .5vw);
+  color: white;
+  text-decoration: none;
+  font-size: max(20px, 3vw);
+}
+
+.footer-content .contact p {
+  margin: max(10px, .5vw) 0;
+  font-size: max(25px, 2vw);
+}
+
+.footer-content .contact .icons {
+  margin-top: max(10px, 1vw);
+}
+
+/**
+* Media Queries
+* -----------------------------------------------------------------------------
+*/
+
+@-ms-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
+
+/** LARGURA DE 425px **/
+
+@media screen and (max-width: 511px) and (min-width: 10px){
+}
+
+/** LARGURA DE 414px **/
+
+@media screen and (min-width: 10px) and (max-width: 414px){
+}
+
+/** LARGURA DE 411px **/
+
+@media screen and (min-width: 10px) and (max-width: 411px){
+}
+
+/** LARGURA DE 375px **/
+
+@media screen and (min-width: 10px) and (max-width: 376px){
+}
+
+/** LARGURA DE 360px **/
+
+@media screen and (min-width: 10px) and (max-width: 361px){
+}
+
+/** LARGURA DE 320px **/
+
+@media screen and (min-width: 10px) and (max-width: 321px){
+}
+
+/** LARGURA DE 1600px **/
+
+@media screen and (max-width: 1670px) and (min-width: 768px){
+}
+
+/** LARGURA DE 1440px **/
+
+@media screen and (min-width: 768px) and (max-width: 1590px){
+}
+
+/** LARGURA DE 1366px **/
+
+@media screen and (min-width: 768px) and (max-width: 1430px){
+}
+
+@media screen and (max-width: 980px) {
+  .service-box .service {
+    width: 100%;
+  }
+}
+
+/** LARGURA DE 1280px **/
+
+@media screen and (max-width: 1260px) and (min-width: 760px){
+}
+
+/** LARGURA DE 1200px **/
+
+@media screen and (min-width: 600px) and (max-width: 1200px){
+
+}
+
+/** LARGURA DE 1024px **/
+
+@media screen and (min-width: 600px) and (max-width: 1024px){
+
+}
+
+/** LARGURA DE 768px **/
+
+@media screen and (max-width: 768px){
+  .page-top {
+    height: 70vh;
+  }
+
+  .page-top .text-content {
+    width: 80%;
+  }
+
+  .about-us {
+    flex-wrap: wrap;
+  }
+
+  .about-us .text-content {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .about-us .bg-image {
+    height: 50vh;
+    width: 100%;
+  }
+
+  .bg-image .triangle {
+    position: relative;
+    top: -.2%;
+    width: 100%;
+    border-top: 50vw solid #D86049;
+    border-bottom: 0;
+    border-right: 0;
+    border-left: max(95vw, 250px) solid transparent;
+  }
+
+  .timeline-box .line-year {
+    width: 100%;
+  }
+}
+
+@media(max-height: 400px) {
+}
+
+/**
+* 12.0 Print
+* -----------------------------------------------------------------------------
+*/
+
